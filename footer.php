@@ -14,7 +14,7 @@ if( have_rows('logo', 'general_setting') ) {
 
 ?>
 
-	<footer class="bg-white text-gray-light py-5">
+	<footer class="bg-white text-gray-light py-5 border-top border-1">
 		<div class="container">
 			<div class="row d-flex flex-column flex-md-row align-items-center gap-3 text-center">
 				<div class="col text-md-start">
@@ -31,37 +31,21 @@ if( have_rows('logo', 'general_setting') ) {
 					</a>
 				</div>
 				<nav class="col">
-<!-- 					<ul class="unstyled-list d-flex flex-column flex-md-row gap-1 mb-0">
-						<li>
-							<a href="#" class="text-gray-light">O mnie</a>
-						</li>
-						<li>
-							<a href="#" class="text-gray-light">Oferta</a>
-						</li>
-						<li>
-							<a href="#" class="text-gray-light">Realizacje</a>
-						</li>
-						<li>
-							<a href="#" class="text-gray-light">Blog</a>
-						</li>
-						<li>
-							<a href="#" class="text-gray-light">Kontakt</a>
-						</li>
-					</ul> -->
-<?php 
 
-if( has_nav_menu('primary_menu' )){
-	wp_nav_menu( array(
-		'menu'            => 'footer_menu',
-		'menu_class'      => 'unstyled-list d-flex flex-column flex-md-row gap-1 mb-0 menu menu--footer',
-		'theme_location'  => 'footer_menu',
-		'container'       => false,
-		'menu_id'         => false,
-		'depth'           => 1
-	) );
-}
+					<?php 
 
-?>
+					if( has_nav_menu('primary_menu' )){
+						wp_nav_menu( array(
+							'menu'            => 'footer_menu',
+							'menu_class'      => 'unstyled-list d-flex flex-column flex-md-row gap-1 mb-0 menu menu--footer',
+							'theme_location'  => 'footer_menu',
+							'container'       => false,
+							'menu_id'         => false,
+							'depth'           => 1
+						) );
+					}
+
+					?>
 
 				</nav>
 				<div class="col text-md-end">
