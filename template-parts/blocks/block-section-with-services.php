@@ -8,7 +8,7 @@ $bg_color = get_field('bg_color');
 
 ?>
 
-<section class="py-4 py-md-6 <?php echo esc_attr($bg_color); ?>" id="<?php echo ( $block['anchor'] ) ? $block['anchor'] : $block['id']; ?>">
+<section class="py-4 py-md-6 <?php echo esc_attr($bg_color); ?>" id="<?php echo ( isset($block['anchor']) ) ? $block['anchor'] : $block['id']; ?>">
 	<div class="container">
 		<div class="row d-flex align-items-center">
 			<header class="col-12 col-md-8 mx-auto text-center">
