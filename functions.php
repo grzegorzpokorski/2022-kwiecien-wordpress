@@ -66,7 +66,7 @@ function greg_allowed_block_types($block_editor_context, $editor_context){
 	
 	if($editor_context->post->post_type === 'page'){
 		return array(
-			'acf/hero',
+			'acf/title-section-for-pages',
 		);
 	}
 
@@ -79,16 +79,16 @@ add_filter('allowed_block_types_all', 'greg_allowed_block_types', 10, 2);
 function greg_acf_blocks_registration(){
 	if(function_exists('acf_register_block_type')){
 
-		// hero
+		// title-section-for-pages
 		acf_register_block_type(array(
-			'name'              => 'hero',
-			'title'             => __('hero'),
-			'description'       => __('hero'),
+			'name'              => 'title-section-for-pages',
+			'title'             => __('sekcja tytułowa dla stron'),
+			'description'       => __('title-section-for-pages'),
 			'render_callback'   => 'acf_block_render_callback',
 			'category'          => 'Sections',
 			'icon'              => 'block-default',
 			'align_content'     => false,
-			'keywords'          => array( 'hero block' ),
+			'keywords'          => array( 'sekcja tytuowa dla stron blok' ),
 			'enqueue_assets'    => 'block_assets',
 			'mode'              => 'edit',
 			'supports'          => array(
@@ -177,18 +177,6 @@ function greg_my_toolbars($toolbars){
 	return $toolbars;
 }
 add_filter('acf/fields/wysiwyg/toolbars', 'greg_my_toolbars');
-
-
-// remove add media in wysiwyg field with default-content tolbar
-function greg_change_post_content_type($field){ 
-    if($field['type'] == 'wysiwyg') {
-        $field['tabs'] = 'visual';
-        $field['toolbar'] = 'default-content';
-        $field['media_upload'] = 0;
-    }
-    return $field;
-}
-add_filter('acf/get_valid_field', 'greg_change_post_content_type');
 
 function greg_add_opions_pages(){
 

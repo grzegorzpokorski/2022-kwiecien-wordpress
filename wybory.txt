@@ -5,3 +5,25 @@ text-gray-light : jasny szary
 text-white : biały
 text-white-green : zielonkawy biały 
 text-black : czarny
+
+
+pt-0 : 0
+pt-1 : 1
+pt-2 : 2
+pt-3 : 3
+pt-4 : 4
+pt-5 : 5
+
+pb-0 : 0
+pb-1 : 1
+pb-2 : 2
+pb-3 : 3
+pb-4 : 4
+pb-5 : 5
+
+h1
+h2
+h3
+h4
+h5
+h6
