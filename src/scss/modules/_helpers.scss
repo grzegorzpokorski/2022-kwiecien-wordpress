@@ -33,3 +33,14 @@ strong{
 	background-color: $gray;
 	margin: 0 .55rem;
 }
+
+.dropdown-item{
+	border-left: .15rem solid transparent;
+	transition: all .35s;
+
+	&:hover,
+	&:focus,
+	&.active{
+		border-left: .15rem solid $green;
+	}
+}

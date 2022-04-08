@@ -52,7 +52,7 @@ if( have_rows('logo', 'general_setting') ) {
 				?>
 
 				<?php if( get_field( 'display_button', 'general_setting' ) && get_field( 'button_link', 'general_setting' ) ): ?>
-					<a href="<?php echo get_field( 'button_link', 'general_setting' ); ?>" class="btn btn-green py-05 ms-md-1">
+					<a href="<?php echo esc_url(get_field( 'button_link', 'general_setting' )); ?>" class="btn btn-green py-05 ms-md-1">
 						<?php echo get_field( 'button_label', 'general_setting' ); ?>
 					</a>
 				<?php endif; ?>
