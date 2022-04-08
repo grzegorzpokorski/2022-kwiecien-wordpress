@@ -70,6 +70,7 @@ function greg_allowed_block_types($block_editor_context, $editor_context){
 			'acf/content-with-image',
 			'acf/section-with-services',
 			'acf/custom-content',
+			'acf/process',
 		);
 	}
 
@@ -146,6 +147,24 @@ function greg_acf_blocks_registration(){
 			'icon'              => 'block-default',
 			'align_content'     => false,
 			'keywords'          => array( 'niestandardowa sekcja z tekstem blok' ),
+			'enqueue_assets'    => 'block_assets',
+			'mode'              => 'edit',
+			'supports'          => array(
+				'align'     => false,
+				'anchor' => true,
+			),
+		));
+
+		// process
+		acf_register_block_type(array(
+			'name'              => 'process',
+			'title'             => __('sekcja z listą przebiegu procesu'),
+			'description'       => __('process'),
+			'render_callback'   => 'acf_block_render_callback',
+			'category'          => 'Sections',
+			'icon'              => 'block-default',
+			'align_content'     => false,
+			'keywords'          => array( 'process blok', 'lista' ),
 			'enqueue_assets'    => 'block_assets',
 			'mode'              => 'edit',
 			'supports'          => array(
