@@ -149,27 +149,35 @@ function get_image($id){
 	return $data;
 }
 
+// custom toolbars for acf wysiwyg field
 function greg_my_toolbars($toolbars){
+
 	// Uncomment to view format of $toolbars
+	
 	// echo '<pre>';
 	// 	print_r($toolbars);
-	// echo '</pre>';
+	// echo '< /pre >';
 	// die;
 	
+	$toolbars['Basic text options'] = array();
+	$toolbars['Basic text options'][1] = array('bold' , 'italic' , 'underline', 'link');
 
-	// Add a new toolbar called "Very Simple"
-	// - this toolbar has only 1 row of buttons
-	$toolbars['default-content' ] = array();
-	$toolbars['default-content' ][1] = array('formatselect', 'bold', 'italic', 'bullist', 'numlist', 'blockquote', 'alignleft', 'aligncenter', 'alignright', 'link', 'fullscreen');
-
-	// echo '<pre>';
-	// 	print_r($toolbars);
-	// echo '</pre>';
-	// die;
+	$toolbars['Custom text content'] = array();
+	$toolbars['Custom text content'][1] = array(
+		'formatselect',
+		'bold',
+		'italic',
+		'underline',
+		'link',
+		'bullist',
+		'numlist',
+		'blockquote',
+	);
 
 	return $toolbars;
 }
 add_filter('acf/fields/wysiwyg/toolbars', 'greg_my_toolbars');
+
 
 // remove add media in wysiwyg field with default-content tolbar
 function greg_change_post_content_type($field){ 
