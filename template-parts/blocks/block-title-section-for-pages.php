@@ -8,7 +8,7 @@ $reverse_content = (get_field('reverse_content')) ? 'flex-row-reverse' : '';
 
 ?>
 
-<section class="pt-4 pb-6" id="<?php echo $block['id']; ?>">
+<section class="pt-4 pb-6" id="<?php echo ( $block['anchor'] ) ? $block['anchor'] : $block['id']; ?>">
 	<div class="container">
 		<div class="row d-flex align-items-center <?php echo esc_attr($reverse_content); ?>">
 			<header class="col-12 col-md-6 text-center text-md-start">

@@ -96,6 +96,7 @@ function greg_acf_blocks_registration(){
 			'mode'              => 'edit',
 			'supports'          => array(
 				'align'     => false,
+				'anchor' => true
 			),
 		));
 
@@ -113,6 +114,7 @@ function greg_acf_blocks_registration(){
 			'mode'              => 'edit',
 			'supports'          => array(
 				'align'     => false,
+				'anchor' => true,
 			),
 		));
 
@@ -130,6 +132,7 @@ function greg_acf_blocks_registration(){
 			'mode'              => 'edit',
 			'supports'          => array(
 				'align'     => false,
+				'anchor' => true,
 			),
 		));
 
@@ -147,6 +150,7 @@ function greg_acf_blocks_registration(){
 			'mode'              => 'edit',
 			'supports'          => array(
 				'align'     => false,
+				'anchor' => true,
 			),
 		));
 

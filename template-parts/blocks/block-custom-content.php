@@ -10,7 +10,7 @@ $columns = ( get_field('columns') ) ? 'custom-content--col-' . get_field('column
 
 ?>
 
-<section class="py-4 py-md-6  <?php echo esc_attr($bg_color); ?>" id="<?php echo $block['id']; ?>">
+<section class="py-4 py-md-6  <?php echo esc_attr($bg_color); ?>" id="<?php echo ( $block['anchor'] ) ? $block['anchor'] : $block['id']; ?>">
 	<div class="container">
 		<div class="row">
 			<header class="col-12">
