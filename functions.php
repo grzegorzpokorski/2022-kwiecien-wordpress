@@ -67,6 +67,7 @@ function greg_allowed_block_types($block_editor_context, $editor_context){
 	if($editor_context->post->post_type === 'page'){
 		return array(
 			'acf/title-section-for-pages',
+			'acf/content-with-image',
 		);
 	}
 
@@ -89,6 +90,23 @@ function greg_acf_blocks_registration(){
 			'icon'              => 'block-default',
 			'align_content'     => false,
 			'keywords'          => array( 'sekcja tytuowa dla stron blok' ),
+			'enqueue_assets'    => 'block_assets',
+			'mode'              => 'edit',
+			'supports'          => array(
+				'align'     => false,
+			),
+		));
+
+		// content-with-image
+		acf_register_block_type(array(
+			'name'              => 'content-with-image',
+			'title'             => __('treść ze zdjęciem'),
+			'description'       => __('content-with-image'),
+			'render_callback'   => 'acf_block_render_callback',
+			'category'          => 'Sections',
+			'icon'              => 'block-default',
+			'align_content'     => false,
+			'keywords'          => array( 'treść ze zdjęciem blok' ),
 			'enqueue_assets'    => 'block_assets',
 			'mode'              => 'edit',
 			'supports'          => array(

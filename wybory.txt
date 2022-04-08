@@ -6,6 +6,13 @@ text-white : biały
 text-white-green : zielonkawy biały 
 text-black : czarny
 
+bg-green : zielony
+bg-gray : szary
+bg-green-light : jasny zielony
+bg-gray-light : jasny szary 
+bg-white : biały
+bg-white-green : zielonkawy biały 
+bg-black : czarny
 
 pt-0 : 0
 pt-1 : 1
