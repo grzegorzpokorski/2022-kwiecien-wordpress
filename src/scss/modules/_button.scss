@@ -1,0 +1,28 @@
+.btn{
+	&-green{
+		color: $white;
+
+		&:focus,
+		&:hover{
+			color: $white;
+		}
+	}
+
+	&-outline-green{
+		color: $green;
+
+		&:focus,
+		&:hover{
+			background-color: $green;
+			color: $white;
+		}
+	}
+}
+
+.btn-hero{
+	padding: $btn-padding-y-sm $btn-padding-x-sm;
+
+	@include media-breakpoint-up(md){
+		padding: $btn-padding-y $btn-padding-x;
+	}
+}

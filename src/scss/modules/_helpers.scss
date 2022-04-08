@@ -1,0 +1,35 @@
+p{
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+
+strong{
+	font-weight: $font-weight-medium;
+}
+
+.unstyled-list{
+	padding-left: 0;
+	padding-bottom: 0;
+	list-style: none;
+}
+
+#main{
+	padding-top: 4.375rem;
+
+	@include media-breakpoint-up(md){
+		padding-top: 6.5rem;
+	}
+}
+
+.navbar-title{
+	font-size: 1.25rem;
+}
+
+.text-separator{
+	display: inline-block;
+	width: 2.5rem;
+	height: 0.125rem;
+	background-color: $gray;
+	margin: 0 .55rem;
+}

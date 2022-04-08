@@ -1,0 +1,44 @@
+.list{
+	list-style: none;
+	padding-bottom: 0;
+	padding-left: 0;
+	row-gap: 1.5rem;
+
+	&--counted{
+		counter-reset: lista;
+		list-style-type: none;
+	}
+
+	&__icon-wrapper{
+		display: inline-block;
+		position: relative;
+		min-width: 4rem;
+		height: 4rem;
+
+		&--bigger{
+			min-width: 5rem;
+			height: 5rem;
+		}
+
+
+		&--counter{
+
+			&:after{
+				@extend .list__icon;
+				font-weight: $font-weight-bold;
+				counter-increment: lista;
+				content: counter(lista);
+			}
+		}
+	}
+
+	&__icon{
+		position: absolute;
+		display: inline-block;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: $spacer * 1.5;
+		color: $white;
+	}
+}

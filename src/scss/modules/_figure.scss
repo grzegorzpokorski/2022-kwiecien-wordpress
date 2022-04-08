@@ -1,0 +1,29 @@
+.figure{
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin-bottom: 0;
+
+	&--article{
+		height: 18rem;
+	}
+
+	&--single-header{
+		height: 30rem;
+		max-height: 50vh;
+	}
+
+	&--scale{
+		&:hover .figure__image,
+		&:focus .figure__image{
+			transform: scale(1.08);
+		}
+	}
+
+	&__image{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: all .35s;
+	}
+}

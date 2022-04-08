@@ -1,0 +1,197 @@
+:root{
+	font-size: 16px;
+}
+
+// colors
+
+$green: #00C865;
+$green-light: #CCF4E0;
+$gray: #222222;
+$gray-light: #555555;
+$white: #ffffff;
+$white-green: #f4f9f4;
+$black: #000000;
+
+$theme-colors:();
+$theme-colors:(
+	'green': $green,
+	'green-light': $green-light,
+	'gray': $gray,
+	'gray-light': $gray-light,
+	'white': $white,
+	'white-green': $white-green,
+	'black': $black,
+);
+
+$colors:();
+
+// Options
+
+// $enable-caret: true;
+// $enable-rounded: false;
+// $enable-shadows: false;
+// $enable-gradients: false;
+// $enable-transitions: true;
+// $enable-hover-media-query: false; // Deprecated, no longer affects any compiled CSS
+// $enable-grid-classes: true;
+// $enable-print-styles: true;
+// $enable-validation-icons: false;
+// $enable-negative-margins: true;
+
+// Body
+
+$body-bg: $white-green;
+$body-color: $gray;
+
+// Links
+
+$link-color: $green;
+$link-decoration: none;
+$link-hover-color: darken($green, 5%);
+$link-hover-decoration: underline;
+
+// fonts
+
+$font-family-sans-serif: 'Rubik', Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+
+$font-size-base: 1rem;
+
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * 0.875);
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.125;
+$h4-font-size: $font-size-base * 1;
+$h5-font-size: $font-size-base * 1;
+$h6-font-size: $font-size-base * 1;
+
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: 1.2;
+
+$headings-margin-bottom:      .5em;
+$headings-font-family:        null;
+$headings-font-style:         null;
+$headings-font-weight:        $font-weight-bold;
+$headings-line-height:        1.2;
+$headings-color:              $gray;
+
+// Buttons
+
+$btn-font-size: $font-size-base;
+
+$btn-padding-y: .8em;
+$btn-padding-x: 1.5em;
+
+$btn-padding-y-sm: $btn-padding-y * .8;
+$btn-padding-x-sm: $btn-padding-x * .8;
+
+$btn-padding-y-lg: $btn-padding-y * 1.1;
+$btn-padding-x-lg: $btn-padding-x * 1.1;
+
+$btn-font-weight: $font-weight-normal;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075);
+
+$btn-border-width: 0.125rem;
+$btn-border-radius: 0;
+$btn-border-radius-lg: $btn-border-radius;
+$btn-border-radius-sm: $btn-border-radius;
+
+$btn-disabled-opacity: 1;
+$btn-link-disabled-color: $gray;
+
+// spacers
+
+$spacer: 1rem;
+
+$spacers: (
+	'05': $spacer * .5,
+	0: 0,
+	1: $spacer * 1,
+	2: $spacer * 2,
+	3: $spacer * 3,
+	4: $spacer * 4,
+	5: $spacer * 5,
+	6: $spacer * 6,
+) !default;
+
+// navbar
+
+$navbar-nav-link-padding-x: $spacer;
+
+// borders
+
+$border-radius:               .43rem;
+
+// accordion
+
+// $accordion-padding-y:                     1rem;
+// $accordion-padding-x:                     1.25rem;
+// $accordion-color:                         $body-color;
+// $accordion-bg:                            $body-bg;
+// $accordion-border-width:                  .2rem;
+// $accordion-border-color:                  $white-green;
+// $accordion-border-radius:                 $border-radius;
+// $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
+
+// $accordion-body-padding-y:                $accordion-padding-y;
+// $accordion-body-padding-x:                $accordion-padding-x;
+
+// $accordion-button-padding-y:              $accordion-padding-y;
+// $accordion-button-padding-x:              $accordion-padding-x;
+// $accordion-button-color:                  $gray;
+// $accordion-button-bg:                     $accordion-bg;
+// $accordion-transition:                    border-radius .15s ease;
+// $accordion-button-active-bg:              $green;
+// $accordion-button-active-color:           $white-dark;
+
+// $accordion-button-focus-border-color:     $white;
+// $accordion-button-focus-box-shadow:       0 0 0 .25rem rgba($green, .5);
+
+// $accordion-icon-width:                    1.25rem;
+// $accordion-icon-color:                    $green;
+// $accordion-icon-active-color:             $white-dark;
+// $accordion-icon-transition:               transform .2s ease-in-out;
+// $accordion-icon-transform:                rotate(-180deg);
+
+// $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+// $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+
+// dropdown
+
+$dropdown-min-width:                10rem;
+$dropdown-padding-x:                0;
+$dropdown-padding-y:                .5rem;
+$dropdown-spacer:                   .125rem;
+$dropdown-font-size:                $font-size-base;
+$dropdown-color:                    $body-color;
+$dropdown-bg:                       $white;
+$dropdown-border-color:             rgba($green-light, .15);
+$dropdown-border-radius:            none;
+// $dropdown-border-width:             $border-width;
+// $dropdown-inner-border-radius:      subtract($dropdown-border-radius, $dropdown-border-width);
+// $dropdown-divider-bg:               $dropdown-border-color;
+$dropdown-divider-margin-y:         $spacer * .5;
+// $dropdown-box-shadow:               $box-shadow;
+
+// $dropdown-link-color:               $gray-900;
+// $dropdown-link-hover-color:         shade-color($dropdown-link-color, 10%);
+$dropdown-link-hover-bg:            rgba($green, .3);
+
+$dropdown-link-active-color:        $gray;
+$dropdown-link-active-bg:           $green-light;
+
+// $dropdown-link-disabled-color:      $gray-500;
+
+$dropdown-item-padding-y:           $spacer * .25;
+$dropdown-item-padding-x:           $spacer;
+
+// $dropdown-header-color:             $gray-600;
+// $dropdown-header-padding:           $dropdown-padding-y $dropdown-item-padding-x;

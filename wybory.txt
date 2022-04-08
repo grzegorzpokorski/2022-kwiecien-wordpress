@@ -1,0 +1,7 @@
+text-green : zielony
+text-gray : szary
+text-green-light : jasny zielony
+text-gray-light : jasny szary 
+text-white : biały
+text-white-green : zielonkawy biały 
+text-black : czarny

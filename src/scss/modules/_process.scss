@@ -1,0 +1,91 @@
+.process{
+	position: relative;
+	padding-bottom: 0;
+	list-style: none;
+	row-gap: 1.5rem;
+	counter-reset: process;
+
+	@include media-breakpoint-up(md){
+		row-gap: 0;
+	}
+
+	&__counter{
+		&:after{
+			counter-increment: process;
+			content: counter(process) ".";
+		}
+	}
+
+	&__item{
+		position: relative;
+		align-items: flex-end;
+
+		&:first-child{
+			&:after{
+				top: 50%;
+				height: calc(50% + 1.5rem);
+
+				@include media-breakpoint-up(md){
+					height: 50%;
+				}
+			}
+		}
+
+		&:last-child{
+			&:after{
+				height: 50%;
+			}
+		}
+
+		@include media-breakpoint-up(md){
+			margin-bottom: 0;
+
+			&:nth-child(even){
+				align-items: flex-start;
+				margin-bottom: 0;
+				text-align: right;
+			}
+		}
+
+		&:before{
+			content: ''; 
+			position: absolute;
+			height: .75rem;
+			width: .75rem;
+			left: .75rem;
+			top: 50%;
+			transform: translateY(-50%);
+			background-color: $green;
+			z-index: 2;
+
+			@include media-breakpoint-up(md){
+				&{
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+
+		&:after{
+			content: '';
+			position: absolute;
+			width: .25rem;
+			height: calc(100% + 1.5rem);
+			top: 0;
+			left: 1rem;
+			background-color: rgba($green, .15);
+			
+			@include media-breakpoint-up(md){
+				height: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	@include media-breakpoint-up(md){
+		&__item:nth-child(even) &__header{
+			justify-content: end;
+		}
+	}
+}
