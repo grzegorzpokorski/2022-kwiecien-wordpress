@@ -4,6 +4,14 @@ p{
 	}
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
+section{
+	scroll-margin-top: $spacer * 2;
+}
+
 strong{
 	font-weight: $font-weight-medium;
 }
