@@ -52,8 +52,8 @@ $reverse_content = (get_field('reverse_content')) ? 'flex-row-reverse' : '';
 			</header>
 
 			<?php if( $image_id ): ?>
-			<figure class="col-12 col-md-6 mt-2 mt-md-0 mb-0">
-				<?php echo wp_get_attachment_image($image_id, "size_medium", "", array("class" => "img-fluid")); ?>
+			<figure class="col-12 col-md-6 mt-2 mt-md-0 mb-0 figure">
+				<?php echo wp_get_attachment_image($image_id, "size_medium", "", array("class" => "img-fluid figure__image figure__image--doodle")); ?>
 			</figure>
 			<?php endif; ?>
 

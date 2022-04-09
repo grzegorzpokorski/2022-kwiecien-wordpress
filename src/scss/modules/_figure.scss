@@ -3,6 +3,7 @@
 	overflow: hidden;
 	display: block;
 	margin-bottom: 0;
+	max-height: 80vh;
 
 	&--article{
 		height: 18rem;
@@ -25,5 +26,10 @@
 		height: 100%;
 		object-fit: cover;
 		transition: all .35s;
+
+		&--doodle{
+			max-height: 80vh;
+			object-fit: contain;
+		}
 	}
 }
