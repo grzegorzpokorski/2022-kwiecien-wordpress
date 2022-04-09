@@ -41,6 +41,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-7 mx-auto custom-content">
+						<?php the_excerpt(); ?>
 						<?php the_content(); ?>	
 					</div>
 				</div>
