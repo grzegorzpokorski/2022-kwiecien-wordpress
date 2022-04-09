@@ -51,6 +51,10 @@
 
 	</main>
 
+	<?php if( get_field('display_section_with_banner') ): ?>
+	<?php get_template_part('template-parts/parts/global/banner'); ?>
+	<?php endif; ?>
+
 <?php else : ?>
 
 <!-- brak tresci -->
