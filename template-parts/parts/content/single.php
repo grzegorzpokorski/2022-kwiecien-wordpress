@@ -44,6 +44,24 @@
 						<?php the_excerpt(); ?>
 						<?php the_content(); ?>	
 					</div>
+					<footer class="col-12 col-md-7 mx-auto">
+
+						<?php if( get_the_tags() ): $tags = get_the_tags(); ?>
+						<ul class="d-flex flex-row flex-wrap gap-05 mt-2 list">
+						
+							<?php foreach($tags as $tag): ?>
+							<?php //print_r($tag); ?>
+							<li>
+								<a href="<?php echo esc_url( get_tag_link($tag->term_id) ); ?>" class="btn btn-sm btn-white-green border-1 border-green">
+									<?php echo esc_html($tag->name); ?>
+								</a>
+							</li>
+							<?php endforeach; ?>
+
+						</ul>
+						<?php endif; ?>
+
+					</footer>
 				</div>
 			</div>
 		</article>
