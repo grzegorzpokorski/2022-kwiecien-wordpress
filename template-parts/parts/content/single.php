@@ -52,8 +52,26 @@
 
 	</main>
 
+	<?php if( get_field('display_section_with_related_posts') ): ?>
+	<?php
+
+	get_template_part(
+		'template-parts/parts/global/related-posts',
+		'',
+		array(
+			'heading'         => get_field('related_heading'),
+			'title'           => get_field('related_title'),
+			'current_post_id' => get_the_ID(),
+			'categories'      => get_field('related_categories'),
+			'number_of_posts' => get_field('related_number_of_posts'),
+		) 
+	);
+
+	?>
+	<?php endif; ?>
+
 	<?php if( get_field('display_section_with_banner') ): ?>
-	<?php get_template_part('template-parts/parts/global/banner'); ?>
+	<?php get_template_part( 'template-parts/parts/global/banner' ); ?>
 	<?php endif; ?>
 
 <?php else : ?>

@@ -1,54 +1,42 @@
 <?php 
-
-$heading = get_field('heading');
-$title = get_field('title');
-$heading_level = get_field('heading_level');
-$description = get_field('description');
-$bg_color = get_field('bg_color');
-$custom_button_label = get_field('custom_button_label');
-
-?>
-
-<?php 
 			
 $the_query = new WP_Query( array(
-	'post_type' => 'post',
-	'posts_per_page' => 3,
+	'post_type'      => 'post',
+	'post__not_in'   => array( $args['current_post_id'] ),
+	'posts_per_page' => $args['number_of_posts'],
+	'category__in'   =>	$args['categories'],
+	'orderby'        => 'rand',
+
 )); 
 
 ?>
 
-<?php if ( $the_query->have_posts() ) : ?>
+<?php if( $the_query->have_posts() ): ?>
 
-<section class="py-4 py-md-6 <?php echo esc_attr($bg_color); ?>" id="<?php echo ( isset($block['anchor']) ) ? $block['anchor'] : $block['id']; ?>">
+<section class="py-4 py-md-6 border-green-light">
 	<div class="container">
 		<div class="row">
+
 			<header class="col-12 col-md-8">
 
-				<?php if( $heading ): ?>
+				<?php if( $args['heading'] ): ?>
 				<span class="d-block text-green text-uppercase fw-bold mb-05">
-					<?php echo $heading; ?>
+					<?php echo $args['heading']; ?>
 				</span>
 				<?php endif; ?>
 
-				<?php if( $title ): ?>
-				<<?php echo $heading_level; ?> class="h2">
-					<?php echo $title; ?>
-				</<?php echo $heading_level; ?>>
-				<?php endif; ?>
-
-				<?php if( $description ): ?>
-				<div>
-					<?php echo $description; ?>
-				</div>
+				<?php if( $args['title'] ): ?>
+				<h2>
+					<?php echo $args['title']; ?>
+				</h2>
 				<?php endif; ?>
 
 			</header>
-				
+
 			<div class="col-12">
 				<ul class="row align-items-stretch justify-content-center mt-3 list">
 
-					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+					<?php while( $the_query->have_posts() ): $the_query->the_post(); ?>
 
 					<li class="col-12 col-md-4 list__item">
 							<article class="d-flex flex-column bg-white border border-2 border-green-light shadow-sm h-100">
@@ -91,11 +79,6 @@ $the_query = new WP_Query( array(
 
 				</ul>
 			</div>
-			<footer class="col-12 text-center pt-2 pt-md-3">
-				<a href="<?php echo get_post_type_archive_link('post'); ?>" class="btn btn-green">
-					<?php echo ( $custom_button_label ) ? $custom_button_label : 'Wszystkie wpisy'; ?>
-				</a>
-			</footer>
 		</div>
 	</div>
 </section>
