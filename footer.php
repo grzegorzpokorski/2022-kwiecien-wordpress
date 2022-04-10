@@ -49,7 +49,7 @@ if( have_rows('logo', 'general_setting') ) {
 					</a>
 				</div>
 
-				<?php if( have_rows('footer_social_items', 'general_setting') and get_field('footer_display_social_media', 'general_setting') ): ?>
+				<?php if( have_rows('footer_social_items', 'general_setting') and get_field('footer_display_social', 'general_setting') ): ?>
 
 				<div class="col order-4 order-md-3">
 					<ul class="unstyled-list mb-0 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-md-end">
