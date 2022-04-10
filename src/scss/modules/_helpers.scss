@@ -8,7 +8,7 @@ html{
 	scroll-behavior: smooth;
 }
 
-section{
+*:target{
 	scroll-margin-top: $spacer * 2;
 }
 
