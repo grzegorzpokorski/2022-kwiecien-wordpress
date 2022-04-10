@@ -41,7 +41,7 @@ $bg_color = get_field('bg_color');
 				<?php echo do_shortcode($contact_form); ?>
 				<?php endif; ?>
 			</div>
-			<div class="col-12 col-md-6 custom-content">
+			<div class="col-12 col-md-6 custom-content mt-2 mt-md-0">
 				<?php if( $content ): ?>
 				<?php echo $content; ?>
 				<?php endif; ?>

@@ -7,8 +7,8 @@
 <label for="temat_wiadomosci" class="input-label">temat wiadomości</label>
 [select topic id:temat_wiadomosci class:form-select class:form-control "Strona internetowa z CMS WordPress" "Projekt graficzny + strona internetowa" "Statyczna strona internetowa" "Projekt graficzny" "Kodowanie szablony graficznego do HTML" "Inny"]
 
-<label for="tresc_wiadomosci" class="input-label">treść wiadomości</label>
-[textarea* tresc_wiadomosci x6 class:form-control id:tresc_wiadomosci placeholder "treść wiadomości"]
+<label for="tresc_wiadomosci" class="input-label">treść wiadomości / opis projektu</label>
+[textarea* tresc_wiadomosci x6 class:form-control id:tresc_wiadomosci placeholder "treść wiadomości / opis projektu"]
 
 [acceptance acceptance-rodo]
 I consent to having this website store my submitted information so they can responed to my inquiry. To learn more visit our Privacy Policy

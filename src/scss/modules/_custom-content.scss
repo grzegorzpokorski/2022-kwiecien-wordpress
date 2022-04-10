@@ -76,8 +76,16 @@
 
 	& .wpcf7{
 		@extend .shadow-sm;
-		padding: 2rem;
 		background-color: $white;
+		padding: .75rem;
+
+		@include media-breakpoint-up(md){
+			padding: 1.5rem;
+		}
+
+		@include media-breakpoint-up(lg){
+			padding: 2rem;
+		}
 
 		& .screen-reader-response{
 			@extend .sr-only;
