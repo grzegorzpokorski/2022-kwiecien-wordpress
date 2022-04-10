@@ -1,6 +1,6 @@
 <?php if(have_posts()): ?>
 
-<?php if( !is_archive() ): ?>
+<?php if( !is_archive() and !is_page('kontakt') ): ?>
 <main id="main" class="bg-white">
 <?php else: ?>
 <main id="main">

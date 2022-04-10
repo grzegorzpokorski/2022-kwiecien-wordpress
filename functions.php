@@ -73,6 +73,7 @@ function greg_allowed_block_types($block_editor_context, $editor_context){
 			'acf/process',
 			'acf/blog-posts-teaser',
 			'acf/custom-banner',
+			'acf/contact-section',
 		);
 	}
 
@@ -211,6 +212,24 @@ function greg_acf_blocks_registration(){
 			),
 		));
 
+		// contact-section
+		acf_register_block_type(array(
+			'name'              => 'contact-section',
+			'title'             => __('sekcja kontaktowa'),
+			'description'       => __('contact-section'),
+			'render_callback'   => 'acf_block_render_callback',
+			'category'          => 'Sections',
+			'icon'              => 'block-default',
+			'align_content'     => false,
+			'keywords'          => array( 'contack', 'form' ),
+			'enqueue_assets'    => 'block_assets',
+			'mode'              => 'edit',
+			'supports'          => array(
+				'align'     => false,
+				'anchor' => true,
+			),
+		));
+
 	}
 }
 add_action('acf/init', 'greg_acf_blocks_registration');
@@ -326,5 +345,21 @@ function greg_add_opions_pages(){
 	
 }
 add_action('acf/init', 'greg_add_opions_pages');
+
+// remove assets - delivered by plugins, themes etc
+function greg_remove_plugin_assets(){
+
+	// styles
+	wp_dequeue_style(array( 
+		'wp-block-library', 
+		'wc-block-style',
+		'global-styles',
+		'contact-form-7',
+	)); 
+
+	// scripts
+	// wp_dequeue_script(array());
+}
+add_action('wp_enqueue_scripts', 'greg_remove_plugin_assets', 999);
 
 ?>

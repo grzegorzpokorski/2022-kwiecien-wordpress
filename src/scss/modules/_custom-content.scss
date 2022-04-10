@@ -75,7 +75,7 @@
 	}
 
 	& .wpcf7{
-		@extend .shadow;
+		@extend .shadow-sm;
 		padding: 2rem;
 		background-color: $white;
 
@@ -87,16 +87,29 @@
 	& form{
 
 		&.invalid{
-			& .wpcf7-form-control:not([type='submit']){
+			& .wpcf7-not-valid{
 				border-color: $red;
 			}
+		}
+
+		& .form-control{
+			padding: 1em 1.0em;
+			border-radius: 0;
+			background-color: $white-green;
+			border-color: $white-green;
+		}
+
+		& .input-label{
+			font-size: .8em;
+			padding: .25em .75em;
+			background-color: rgba($green, .5);
 		}
 
 		& span.wpcf7-form-control-wrap{
 			display: flex;
 			flex-direction: column;
 			row-gap: .75rem;
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
 		}
 
 		& input[type='submit']:disabled{
