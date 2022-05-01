@@ -1312,6 +1312,48 @@
                         "toolbar": "basic_text_options",
                         "media_upload": 0,
                         "delay": 0
+                    },
+                    {
+                        "key": "field_626e82b04e08c",
+                        "label": "czy ma linkować?",
+                        "name": "add_link",
+                        "type": "true_false",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 0,
+                        "ui": 1,
+                        "ui_on_text": "",
+                        "ui_off_text": ""
+                    },
+                    {
+                        "key": "field_626e82ee4e08d",
+                        "label": "link",
+                        "name": "link",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_626e82b04e08c",
+                                    "operator": "==",
+                                    "value": "1"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "50",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url"
                     }
                 ]
             },

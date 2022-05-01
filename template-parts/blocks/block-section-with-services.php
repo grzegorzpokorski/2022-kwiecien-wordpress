@@ -31,30 +31,6 @@ $bg_color = get_field('bg_color');
 				</div>
 				<?php endif; ?>
 
-				<?php if( have_rows('buttons') ): ?>
-				<div class="d-flex flex-wrap justify-content-start gap-05 mt-1">
-
-					<?php
-
-					while( have_rows('buttons') ):
-
-					the_row();
-
-					$label = ( get_sub_field('label') ) ? get_sub_field('label') : get_sub_field('link')['title'];
-					$link = get_sub_field('link')['url'];
-					$target = get_sub_field('link')['target'];
-					$style = get_sub_field('style');
-
-					?>
-
-					<a href="<?php echo esc_url($link); ?>" class="btn btn-hero <?php echo esc_attr($style); ?>" <?php echo ( $target ) ? 'target="$target"' : ''; ?>>
-						<?php echo $label ?>
-					</a>
-					<?php endwhile; ?>
-
-				</div>
-				<?php endif; ?>
-
 			</header>
 
 			<?php if( have_rows('items') ): ?>
@@ -72,11 +48,30 @@ $bg_color = get_field('bg_color');
 								</span>
 								<?php endif; ?>
 
+								
+								<?php 
+
+								if( get_sub_field('add_link') and get_sub_field('link') ){
+									echo "<a href='" . get_sub_field('link') . "'>";
+								}
+
+								?>
+								
 								<?php if( get_sub_field('name') ): ?>
 								<h3 class="mb-0">
 									<?php echo get_sub_field('name'); ?>
 								</h3>
 								<?php endif; ?>
+
+								<?php 
+
+								if( get_sub_field('add_link') and get_sub_field('link') ){
+									echo "</a>";
+								}
+
+								?>
+
+								
 
 							</header>
 							
