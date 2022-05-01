@@ -10,7 +10,7 @@
 					<?php
 
 					if( is_archive() ){
-						echo "<h2 class='h2'>" . get_the_archive_title() . "</h2>";
+						echo "<h1 class='h2'>" . get_the_archive_title() . "</h1>";
 					}
 					elseif( is_home() ){
 						$title = wp_title('', false);
@@ -19,10 +19,10 @@
 							$title = get_field('blog_title', 'general_setting');
 						}
 
-						echo "<h2 class='h2'>" . $title . "</h2>";
+						echo "<h1 class='h2'>" . $title . "</h1>";
 					}
 					else{
-						echo "<h2 clas=='h2'>" . wp_title('', false) . "</h2>";
+						echo "<h1 clas=='h2'>" . wp_title('', false) . "</h1>";
 					} ?>
 
 					<?php if( get_the_archive_description() ): ?>
